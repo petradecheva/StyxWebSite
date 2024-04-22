@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "cl": "poseidon",
+        "name":" STYX POSEIDON",
+        "price": 1.50,
+        "image": "assets/images/poseidon_produkt.png"
+    },
+    {
+        "id": 2,
+        "cl": "atina",
+        "name":" STYX ATHENA",
+        "price": 1.50,
+        "image": "assets/images/atina_produkt.png"
+    },
+    {
+        "id": 3,
+        "cl": "zevs",
+        "name":" STYX ZEUS",
+        "price": 1.50,
+        "image": "assets/images/zevs_produkt.png"
+    }
+    
+]

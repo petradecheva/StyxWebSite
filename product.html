@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/products.scss" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Quicksand&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+
+
+    <title>STYX</title>
+
+  </head>
+  <body>
+    <div id="loading">
+      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+  <div class="contents">
+    <div class="topnav" id="myTopnav">
+      <p>STYX</p>
+      <!-- <img id = "logo" src = "assets/images/logo.jpg"> -->
+          <a href="shop.html">SHOP</a>
+          <a href="product.html" class="active">PRODUCTS</a>
+          <a href="index.html" >HOME</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+      </a>
+  </div>
+  <div class = "start">
+      <div id="content" style = "margin-left:150px;">
+          <h2 id = "name">POSEIDON</h2>
+          <p>Dashing through the snow
+            In a one-horse open sleigh
+            O'er the fields we go
+            Laughing all the way
+            Bells on bobtails ring
+            Making spirits bright
+            What fun it is to ride and sing
+            A sleighing song tonight, oh!</p> 
+      </div>
+      <model-viewer src="assets/3d-models/poseidon.glb" id = "startcan" alt="can model" class = "imageTag" style = " rotate: 0deg;" poster="assets/3d-models/poseidon.webp"  camera-controls shadow-intensity="1" camera-orbit="-35.94deg 97.12deg 71.76m" field-of-view="30deg"  auto-rotate  environment-image="assets/3d-models/studio_small_02_4k.hdr">
+      </model-viewer>
+      <!-- <div class="btn-container"> -->
+        <div class="container">
+          <div class="center">
+            <button class="btn" onclick = "window.location='shop.html'">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+              <span >SHOP</span>
+            </button>
+          </div>
+        </div>
+        <div class="arrow" onclick="previous()" style = "rotate: 270deg; position:absolute; top: 55%; left:5%"></div>
+        <div class="arrow" onclick="next()" style = "rotate: 90deg; position:absolute; top: 55%; right:5%"></div>
+
+        <!-- <span class="next" onclick="previous()" style = "rotate: 180deg; position:absolute; top: 50%; left:2%"></span>
+        <span class="next" onclick="next()" style = "position:absolute; top: 50%; right:5%"></span>   -->
+      <!-- </div> -->
+      
+  </div>
+  </div>
+  
+    
+  <div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="interactive"></div>
+    </div>
+  </div>
+  
+    <script type="module" src="src/product.ts"></script>
+    <script src = "src/main.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/style.scss" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Quicksand&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+
+    <title>STYX</title>
+
+  </head>
+  <body>
+    <div id="loading">
+      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    
+  <div class="contents">
+    <div class="topnav" id="myTopnav">
+      <!-- <img src = 'assets/images/logo.png' id = "logo"> -->
+      <p>STYX</p>
+      <a href="shop.html">SHOP</a>
+      <a href="product.html">PRODUCTS</a>
+      <a href="index.html" class="active">HOME</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+      </a>
+  </div>
+  <div class = "start" id = "start">
+      <div id="content">
+          <h2>STYX</h2>
+          <p>Sip the power of gods</p> 
+      </div>
+      <div id="model">
+          <model-viewer src="assets/3d-models/poseidon.glb"  id ="startcan" alt="can model" shadow-intensity="1" exposure="0.4"  auto-rotate camera-orbit="35.39deg 110.4deg 263.1m" field-of-view="30deg" environment-image="assets/3d-models/rosendal_park_sunset_4k.hdr">
+          </model-viewer>
+      </div> 
+  </div>
+  <div class="arrow">
+      <span></span>
+  </div>
+</div>
+  
+    
+  <div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="interactive"></div>
+    </div>
+  </div>
+  <div class = "overview">
+    <div class = "overview-container" onclick = "window.location.href = 'product.html'">
+      <img  src = "assets/images/zevs_produkt.png"  class = "image-3d" id = "z" style = "left: 20%; ">
+      <!-- <div class = "hover-elements"></div> -->
+        <img src = "assets/images/zevs_invert.png" class = "image-overview" style = "left: 10%;  ">
+        <h3 class = "hover-name"  style = "top:150%;left: 29%; ">ZEUS</h3>
+      <!-- </div> -->
+    </div>
+    <div class = "overview-container" onclick = "window.location.href = 'product.html'" >
+      <!-- <model-viewer src="assets/3d-models/atina.glb" class = "overview-model" id = "2" alt="can model" shadow-intensity="1"  auto-rotate camera-orbit="-39.26deg 95.46deg 71.76m" field-of-view="30deg" environment-image="assets/3d-models/studio_small_09_4k.hdr"  exposure = "1.05" style = "margin-left: 30vw;">
+      </model-viewer> -->
+      <img  src = "assets/images/atina_produkt.png"  class = "image-3d" id = "a" style = "left: 45%; ">
+      <img src = "assets/images/atina_invert.png" class = "image-overview" style = "left: 35%; ">
+      <h3 class = "hover-name" style = "top:150%; left: 54%; ">ATHENA</h3>
+    </div>
+    <div class = "overview-container" onclick = "window.location.href = 'product.html'">
+      <!-- <model-viewer src="assets/3d-models/poseidon.glb" id = "1" class = "overview-model" alt="can model" shadow-intensity="1" exposure="1.05"  auto-rotate camera-orbit="-39.26deg 95.46deg 71.76m" field-of-view="30deg"  environment-image="assets/3d-models/studio_small_09_4k.hdr" style = "margin-left: 50vw;">
+      </model-viewer> -->
+      <img  src = "assets/images/poseidon_produkt.png"  id = "p"  class = "image-3d" style = "left: 70%;">
+      <img  src = "assets/images/poseidon_invert.png"  class = "image-overview" style = "left: 60%;  transform: scaleX(-1);">
+      <h3 class = "hover-name" style = "top:150%;left: 79%; ">POSEIDON</h3>
+
+      
+    </div>
+  </div>
+  
+  <!-- <div class="container">
+    
+    <div class="card">
+        <div class="card-header">
+            <img src="assets/images/kopi.jpg"
+                alt="azis" />
+        </div>
+        <div class="card-body">
+            <span class="tag tag-red">HOT</span>
+            <h4>
+              Azis razkriva Magiyata zad Stsenata s Novata si Taĭna za Energiya i Stil!
+            </h4>
+            <p>
+                
+            </p>
+           
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="assets/images/IMG_3934.jpg" alt="galin" />
+        </div>
+        <div class="card-body">
+            <span class="tag tag-red">HOT</span>
+            <h4>
+              Galin lasna samo po energiina napitka
+            </h4>
+            <p>
+
+            </p>
+           
+        </div>
+    </div>
+</div> -->
+<!-- Page Wrap -->
+<!-- <h1 style = "color:black;"> NEWS</h1> -->
+<div class="page-wrap">
+  <!-- <h1 style = "color:black">NEWS</h1> -->
+  <div id="home-slider" style = "box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide-one">
+          <div class="swiper-image" data-swiper-parallax-y="-20%">
+            <div class="swiper-image-inner swiper-image-left swiper-image-one">
+              <h1><span class="emphasis" style="text-shadow: 2px -1px 15px rgb(248, 247, 247);">Galin</span> <br><span style="text-shadow: 2px -1px 15px rgb(173, 172, 172);">se poyavi samo po energiina napitka</span></h1>
+              <!-- <p>se poyavi samo po energiina napitka</p> -->
+            </div>
+          </div>
+          <div class="swiper-image" data-swiper-parallax-y="35%">
+            <div class="swiper-image-inner swiper-image-right swiper-image-two">
+              <p class="paragraph">
+                <div class="container">
+                  <div class="center">
+                    <button class="btn">
+                      <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                      </svg>
+                      <span>eksplor</span>
+                    </button>
+                  </div>
+                </div>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-two">
+          <div class="swiper-image" data-swiper-parallax-y="-20%">
+            <div class="swiper-image-inner swiper-image-left swiper-image-three">
+              <h1><span class="emphasis" style="text-shadow: 2px -1px 15px rgb(248, 247, 247);">Azis</span> <br><span style="text-shadow: 2px -1px 15px rgb(173, 172, 172);">razkriva Magiyata zad Scenata</span></h1>
+              <!-- <p>Chapter II, page VII</p> -->
+            </div>
+          </div>
+          <div class="swiper-image" data-swiper-parallax-y="35%">
+            <div class="swiper-image-inner swiper-image-right swiper-image-four">
+              <p class="paragraph">
+                <div class="container">
+                  <div class="center">
+                    <button class="btn">
+                      <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                      </svg>
+                      <span>eksplor</span>
+                    </button>
+                  </div>
+                </div>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="swiper-slide swiper-slide-three">
+          <div class="swiper-image" data-swiper-parallax-y="-20%">
+            <div class="swiper-image-inner swiper-image-left swiper-image-five">
+              <h1>A <span class="emphasis">Sense</span>. <br><span>Of Things to Come.</span></h1>
+              <p>Chapter III, page XI</p>
+            </div>
+          </div>
+          <div class="swiper-image" data-swiper-parallax-y="35%">
+            <div class="swiper-image-inner swiper-image-right swiper-image-six">
+              <p class="paragraph">
+                Every man carries Two Bags about with him, one in front and one behind, and both are packed full of faults. The Bag in front contains his neighbours’ faults, the one behind his own. Hence it is that men do not see their own faults, but never fail to see
+                those of others.
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+</div>
+<div class="responsive-container-block bigContainer">
+  <div class="responsive-container-block Container">
+    <div class="imgContainer">
+      <!-- <img class="blueDots" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/aw3.svg"> -->
+      <!-- <img class="mainImg" src="assets/images/IMG_3937.jpg" style="filter: invert(1);"> -->
+      <model-viewer src="assets/3d-models/atina.glb"  class = "mainImg" alt="can model" shadow-intensity="1" exposure="0.4"  auto-rotate camera-orbit="35.39deg 110.4deg 263.1m" field-of-view="30deg"  >
+      </model-viewer>
+      <p> nz ko da sloja murzi me veche </p>
+    </div>
+    <div class="responsive-container-block textSide">
+      <p class="text-blk heading">
+        About Us
+      </p>
+      <p class="text-blk subHeading" style = "font-family: 'Cormorant Garamond', serif;">
+        V chetvurto she ni slushat, samo v trakove sum pyal
+Za taya pesen she zakicha zlatniya medal
+Akula kato pluva znaesh vseki koziruva
+Kato vidite patrula burzo palite tsarvula (byagaaii)
+Pusti ulitsi kat nula, nyaya koii da ta napsuva
+Obikalyam s pitbula tryaya lev da sa naduva
+To zatvora e za hora, ama chakaii pomisli
+Kak she budesh nyakoii mezhdu chetiri steni
+Da si gangster e na moda, mozhe bi, ma nadali
+Oniya otgore gleda nqq ti prosti
+      </p>
+      <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+        <div class="cardImgContainer">
+          <img class="cardImg" src="assets/images/rali.jpg">
+        </div>
+        <div class="cardText">
+          <p class="text-blk cardHeading">
+            Rali
+          </p>
+          <p class="text-blk cardSubHeading" style = "font-family: 'Cormorant Garamond', serif;">
+            web designer / Srali <br>
+            tatuist, dzen, mlad dizainer <br>
+            s viziq kato ot painer<br>
+            s neveroqtna darba ot boga<br>
+            s nishto ne si capa droba
+          </p>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+        <div class="cardImgContainer">
+          <img class="cardImg" src="assets/images/mia.jpeg">
+        </div>
+        <div class="cardText">
+          <p class="text-blk cardHeading">
+            Mia
+          </p>
+          <p class="text-blk cardSubHeading" style = "font-family: 'Cormorant Garamond', serif;">
+            ne moa si napi6a sama 
+          </p>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+        <div class="cardImgContainer">
+          <img class="cardImg" src="assets/images/as.jpg">
+        </div>
+        <div class="cardText">
+          <p class="text-blk cardHeading">
+            Pepa
+          </p>
+          <p class="text-blk cardSubHeading" style = "font-family: 'Cormorant Garamond', serif;">
+            web developer - shefa <br>
+            mlada prosperitetna dama <br>
+            misli samo kak da pushi na djama <br> i no-life-i kod na divana <br>
+            tva ne i prechi da e rumena i zasmqna<br>
+          </p>
+        </div>
+      </div>
+     
+      <a>
+        <button class="explore">
+          Explore our Services
+        </button>
+      </a>
+    </div>
+    <!-- <img class="redDots" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/cw3.svg"> -->
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo">STYX</h1>
+        
+    <h2>Contact</h2>
+    
+    <address>
+       str. Qkimacki MG, Varna<br>
+          
+      <a class="footer__btn" href="mailto:office@styx.bg">Email Us</a>
+    </address>
+  </div>
+  
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title">Media</h2>
+
+      <ul class="nav__ul">
+        <li>
+          <a href="#">Online</a>
+        </li>
+
+        <li>
+          <a href="#">Print</a>
+        </li>
+            
+        <li>
+          <a href="#">Alternative Ads</a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item nav__item--extra">
+      <h2 class="nav__title">Technology</h2>
+      
+      <ul class="nav__ul nav__ul--extra">
+        <li>
+          <a href="#">Hardware Design</a>
+        </li>
+        
+        <li>
+          <a href="#">Software Design</a>
+        </li>
+        
+        <li>
+          <a href="#">Digital Signage</a>
+        </li>
+        
+        <li>
+          <a href="#">Automation</a>
+        </li>
+        
+        <li>
+          <a href="#">Artificial Intelligence</a>
+        </li>
+        
+        <li>
+          <a href="#">IoT</a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item">
+      <h2 class="nav__title">Legal</h2>
+      
+      <ul class="nav__ul">
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        
+        <li>
+          <a href="#">Terms of Use</a>
+        </li>
+        
+        <li>
+          <a href="#">Sitemap</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  
+  <div class="legal">
+    <p>&copy; STYX Company</p>
+    
+    <div class="legal__links">
+      <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+    </div>
+  </div>
+</footer>
+    <script type="module" src="/src/main.ts"></script>
+    <script src = "src/main.js"></script>
+  </body>
+</html>

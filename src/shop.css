@@ -1,0 +1,350 @@
+
+@font-face {
+    font-family: "Dragon Slayer";
+    src: url('image/Dragon\ Slayer\ Italic.ttf') format("truetype");
+  }
+body{
+    margin: 0;
+    font-family: "Dragon Slayer";
+}
+
+  
+.container{
+    /* background-color: #0f0f0f; */
+    /* display: flex; */
+    width: 100%;
+    margin: auto;
+    /* max-width: 90vw; */
+    text-align: center;
+    transition: transform .5s;
+    z-index: 2;
+    /* width: 100%; */
+    height: 90%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+   
+}
+svg{
+    width: 30px;
+}
+/* header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+} */
+.icon-cart{
+    left:50%;
+    top:2%;
+    position: absolute;
+    float:right;
+    
+}
+/* .icon-cart span{
+    position: relative;
+    float: right;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    /* display: inline-block; */
+    /* justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff; */
+    /* top: 50%;
+    right: -20px; 
+}
+.title{
+    font-size: xx-large;
+} */
+.listProduct .item img{
+    width: 80%;
+    filter: drop-shadow(0 27px 20px rgba(163, 161, 161, 0.6));
+    /* filter: drop-shadow(0 27px 20px black); */
+}
+.listProduct .item:hover{
+    
+    filter: drop-shadow(0 30px 20px black);
+    
+}
+.listProduct{
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dragon Slayer', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color:#fff;
+    width:65vw;
+    height: 90%;
+    /* height:40vw; */
+    padding-left:17.5vw;
+    padding-right:17.5vw;
+    padding-top:2vw;
+    /* background-color: aqua; */
+}
+.listProduct .item{
+    width: 18vw;
+    height:auto;
+    /* background-color: #EEEEE6; */
+    background-color: #0f0f0f;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 1s;
+}
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: 2vw;
+}
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: 1vw;
+}
+.listProduct .item button{
+    font-family: 'Dragon Slayer', sans-serif;
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width:60px;
+    transition: 1s;
+    /* transition: width 1s; */
+}
+/* .listProduct .item button:hover spam{
+    display:none;
+} */
+/* .listProduct .item button:hover:before{
+    content: "Add";
+    /* font-size:1em; 
+} */
+.listProduct .item button:hover{
+    filter: drop-shadow(0 5px 10px rgb(139, 210, 252));
+    width:80px;
+    
+}
+/* cart */
+.cartTab{
+    z-index: 2;
+    width: 400px;
+    background-color: black;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+    font-family: 'Dragon Slayer', sans-serif;
+}
+body.showCart .cartTab{
+    right: 0;
+}
+body.showCart .container{
+    transform: translateX(-250px);
+}
+
+.cartTab h1{
+    padding: 10px;
+    margin: 0;
+    font-weight: 300;
+    /* font-family: ; */
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab button{
+    width:200px;
+    font-family: 'Dragon Slayer', sans-serif;
+    background-color: #cf0ee8;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 1s;
+}
+.cartTab button:hover{
+    background-color: rgb(96, 218, 255);
+}
+.cartTab .close{
+    background-color: #eee;
+}
+.listCart .item img{
+    width: 75%;
+    /* filter: drop-shadow(0 5px 10px rgba(163, 161, 161, 0.6)); */
+}
+.listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+@media only screen and (max-width: 992px) {
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.footer {
+    font-family: "Dragon slayer" ;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #cfcccc;
+    background-color: #1a1a1a;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .footer > * {
+    flex:  1 100%;
+  }
+  
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer__logo {
+    font-family: "Dragon slayer" ;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.2rem;
+  }
+  
+  .footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .nav__title {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  
+  .footer address {
+    font-style: normal;
+    color: #999;
+  }
+  
+  .footer__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer li {
+    line-height: 2em;
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .footer__nav {
+    display: flex;
+      flex-flow: row wrap;
+  }
+  
+  .footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .nav__ul a {
+    color: #999;
+  }
+  
+  .nav__ul--extra {
+    column-count: 2;
+    column-gap: 1.25em;
+  }
+  
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+  }
+    
+  .legal__links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .heart {
+    color: #2f2f2f;
+  }
+  
+  @media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1;
+    }
+    
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    
+    .footer__addr {
+      flex: 1 0px;
+    }
+    
+    .footer__nav {
+      flex: 2 0px;
+    }
+  }
